@@ -2,9 +2,10 @@
 FROM rocker/rstudio
 
 # Add conda installer and run
-ADD conda/Miniconda3-latest-Linux-x86_64.sh /home/rstudio/Downloads/
-RUN chmod +x /home/rstudio/Downloads/Miniconda3-latest-Linux-x86_64.sh
-RUN bash /home/rstudio/Downloads/Miniconda3-latest-Linux-x86_64.sh
+ADD conda/Miniconda3-latest-Linux-x86_64.sh ~/miniconda.sh
+RUN chmod +x ~/miniconda.sh && \ 
+  bash ~/miniconda.sh -b -p ~/miniconda/ && \
+  rm ~/minconda.sh
 
 # Add r package requirements and run
 ADD add_r_kernel.sh /usr/local/bin/
