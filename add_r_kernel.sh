@@ -1,4 +1,6 @@
 R -e "install.packages(
-  'dplyr',
-  'reticulate',
+  c(
+    'dplyr',
+    'reticulate'
+  ),
   repos='http://cran.us.r-project.org')"
