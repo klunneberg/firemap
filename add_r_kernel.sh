@@ -7,9 +7,9 @@ R -e "install.packages(
     'stars',
     'googledrive',
     'rgee',
-    "remotes",
-    "raster",
-    "rgdal",
-    "raster"
+    'remotes',
+    'raster',
+    'rgdal',
+    'raster'
   ),
   repos='http://cran.us.r-project.org')"
